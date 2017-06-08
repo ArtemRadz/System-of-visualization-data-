@@ -1,0 +1,3 @@
+					Count of transport
+	Bicycle		Moto 	 	truck 		freight 	Car
+	 2			5         	 10      	 15			50

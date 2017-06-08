@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Веб-сервіс для візуалізації статистичних даних</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Веб-сервіс для візуалізації статистичних даних</h1>
+	<main>
+		<section>
+			<form action="#">
+			<p class="download-pls">Загрузіть файл в форматі txt або xlsx з Вашими даними</p>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar"></div>
+			</div>
+				<button class="upload-btn">Загрузити</button>
+				<input id="upload-input" type="file" accept="text/plain, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="uploads[]">
+				<div>
+					<p class="choose-diagram">Виберіть тип діаграми</p>
+					<input type="radio" id="radio-bar" name="typeOfDiagram" value="bar"/>
+					<label for="radio-bar"><span></span>Стовпчаста</label>
+					<input type="radio" id="radio-hbar" name="typeOfDiagram" value="hbar">
+					<label for="radio-hbar"><span></span>Стрічкова</label>
+					<input type="radio" id="radio-pie" name="typeOfDiagram" value="pie">
+					<label for="radio-pie"><span></span>Кругова</label>
+					<input type="radio" id="radio-venn" name="typeOfDiagram" value="venn">
+					<label for="radio-venn"><span></span>Венна</label>
+					<input type="radio" id="radio-bubble" name="typeOfDiagram" value="bubble">
+					<label for="radio-bubble"><span></span>Бульбашкова</label>
+					<input type="radio" id="radio-line" name="typeOfDiagram" value="line">
+					<label for="radio-line"><span></span>Лінійна</label>
+					<input type="radio" id="radio-radar" name="typeOfDiagram" value="radar">
+					<label for="radio-radar"><span></span>Пелюсткова</label>
+					<input type="radio" id="radio-scatter" name="typeOfDiagram" value="scatter">
+					<label for="radio-scatter"><span></span>Точкова</label>
+					<button class="start" type="button">Відобразити графік</button>
+				</div>
+			</form>
+			<div id="chartDiv"></div>
+			<div class="format-download">
+				<p class="choose-download-diagram">Виберіть формат в якому Ви бажаєте завантажити діаграму</p>
+				<button class="download-pdf">PDF</button>
+				<button class="download-png">PNG</button>
+				<button class="download-svg">SVG</button>
+				<button class="download-print">Вивести діаграму на друк</button>
+				<a href="#" class="download-png-hidden" id="download-png-hidden-id" download>Скачати в форматі PNG</a>
+			</div>
+			<div class="prev-diagram">
+				<button class="show-diagram">Вивести попередні діаграми</button>
+				<button class="remove-diagram">Видалити діаграми</button>
+			</div>
+		</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+	<script src="xlsx.full.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
